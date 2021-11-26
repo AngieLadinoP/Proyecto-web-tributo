@@ -76,10 +76,11 @@
     }
     
     main {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/pictures/fondo.jpg");
+        /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/pictures/fondo.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: center; */
+        background-color: black;
         text-align: justify;
         font-family: "rubik", sans-serif;
         font-style: normal;
