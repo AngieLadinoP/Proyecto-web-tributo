@@ -96,8 +96,8 @@ h2 {
 }
 
 img {
-    width: 250px;
-    height: 350px;
+    width: 200px;
+    height: 300px;
     margin: auto;
 }
 
@@ -207,7 +207,7 @@ img {
 footer {
     background-color: black;
     color: white;
-    height: 10%;
+    height: auto
 }
 
 .contenedor-footer {
@@ -218,7 +218,7 @@ footer {
     flex-wrap: wrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     /* .contenedor-nav {
         width: 90%;
         margin: auto;
@@ -245,101 +245,90 @@ footer {
     .contenedor-nav {
         display: none;
     }
-}
-
-h1,
-h2 {
-    font-size: x-large;
-}
-
-.contenedor-pagina-principal {
-    width: 90%;
-    margin: auto;
-    padding: 0px 0px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
-}
-
-#titulo-principal {
-    grid-column: 1/span 1;
-    grid-row: 1/span 1;
-    margin: auto;
-}
-
-#foto-principal {
-    width: 230px;
-    height: 130px;
-    grid-column: 1/span 1;
-    grid-row: 2/ span 1;
-    margin: auto;
-}
-
-#texto-introduccion {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
-    margin: auto;
-}
-
-.contenedor-sobre-autor {
-    width: 90%;
-    margin: auto;
-    padding: 0px 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 8fr;
-}
-
-.contenedor-obras {
-    width: 90%;
-    margin: auto;
-    padding: 0px 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 8fr;
-}
-
-.contenedor-portadas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    gap: 20px;
-}
-
-img {
-    width: 139.13px;
-    height: 215.23px;
-    margin: auto;
-}
-
-#obras {
-    grid-column: 1/span 1;
-    grid-row: 1/span 1;
-    margin: auto;
-}
-
-
-}
-.contenedor-reconocimientos {
-    width: 90%;
-    margin: auto;
-    padding: 0px 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
-}
-.contenedor-galeria {
-    width: 90%;
-    margin: auto;
-    padding: 0px 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
-}
-#galeria {
-    grid-column: 1/span 1;
-    grid-row: 1/span 1;
-    margin: auto;
-}
-
+    h1,
+    h2 {
+        font-size: x-large;
+    }
+    .contenedor-pagina-principal {
+        width: 90%;
+        margin: auto;
+        padding: 0px 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+    }
+    #titulo-principal {
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+        margin: auto;
+    }
+    #foto-principal {
+        width: 230px;
+        height: 130px;
+        grid-column: 1/span 1;
+        grid-row: 2/ span 1;
+        margin: auto;
+    }
+    #texto-introduccion {
+        grid-column: 1/span 1;
+        grid-row: 3/span 1;
+        margin: auto;
+    }
+    .contenedor-sobre-autor {
+        width: 90%;
+        margin: auto;
+        padding: 0px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr;
+    }
+    .contenedor-obras {
+        width: 90%;
+        margin: auto;
+        padding: 0px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr;
+    }
+    .contenedor-portadas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+    img {
+        width: 139.13px;
+        height: 215.23px;
+        margin: auto;
+    }
+    #obras {
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+        margin: auto;
+    }
+    .contenedor-reconocimientos {
+        width: 90%;
+        margin: auto;
+        padding: 0px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    .contenedor-galeria {
+        width: 90%;
+        margin: auto;
+        padding: 0px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    #galeria {
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+        margin: auto;
+    }
+    .contenedor-footer {
+        display: inline-block;
+        margin: auto;
+    }
 }
