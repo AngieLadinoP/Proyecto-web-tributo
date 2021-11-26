@@ -1,335 +1,328 @@
-    html,
-    body,
-    footer {
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        padding: 0px 30;
-        overflow-x: hidden;
-        box-sizing: border-box;
-        text-decoration: none;
-        color: white;
-    }
-    
-    header {
-        background-color: black;
-        color: white;
-    }
-    
+html,
+body,
+footer {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px 30;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0px;
+}
+
+.contenedor-nav {
+    width: 90%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 1fr;
+}
+
+#logo {
+    width: 105px;
+    height: 80px;
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    margin: auto;
+}
+
+.menu {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    margin: auto;
+}
+
+.nav-enlace {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: "rubik", sans-serif;
+    font-size: large;
+}
+
+.nav-enlace:hover {
+    background-color: white;
+    color: black;
+}
+
+.menu {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-boton {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    display: none;
+}
+
+.nav-boton:hover {
+    background-color: white;
+    color: black;
+}
+
+main {
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/pictures/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    background-color: black;
+    text-align: justify;
+    font-family: "rubik", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: large;
+    color: white;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+    font-size: xx-large;
+    color: white;
+}
+
+img {
+    width: 139.13px;
+    height: 215.23px;
+    margin: auto;
+}
+
+.contenedor-pagina-principal {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+#titulo-principal {
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+    margin: auto;
+}
+
+#foto-principal {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    grid-column: 2/span 1;
+    grid-row: 2/ span 1;
+}
+
+#texto-introduccion {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    margin: auto;
+    padding: 10px;
+}
+
+.contenedor-sobre-autor {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#sobre-el-autor {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    margin: auto;
+}
+
+.contenedor-obras {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.contenedor-portadas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#obras {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    margin: auto;
+}
+
+.contenedor-reconocimientos {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+#reconocimientos {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    margin: auto;
+}
+
+.contenedor-galeria {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#galeria {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    margin: auto;
+}
+
+#foto1 {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    grid-column: 1/span 1;
+    grid-row: 1/ span 1;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 10%;
+}
+
+.contenedor-footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
     .contenedor-nav {
         width: 90%;
         margin: auto;
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr;
     }
-    
-    #logo {
-        width: 70%;
-        height: 70%;
-        grid-column: 1/span 1;
-        grid-row: 1/span 2;
-        margin: auto;
-    }
-    
     #titulo-header {
-        grid-column: 2/span 2;
+        grid-column: 1/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    
     .menu {
-        grid-column: 2/span 1;
+        grid-column: 1/span 1;
         grid-row: 2/span 1;
         margin: auto;
     }
-    
-    .nav-enlace {
-        display: inline-block;
-        background-color: black;
-        color: white;
-        padding: 10px 30px;
-        text-decoration: none;
-    }
-    
-    .nav-enlace:hover {
-        background-color: white;
-        color: black;
-    }
-    
     .menu {
-        background-color: black;
-        display: flex;
-        justify-content: space-around;
+        flex-direction: column;
     }
-    
+    .nav-enlace {
+        margin: 10px 0;
+    }
     .nav-boton {
         background-color: black;
         color: white;
         padding: 10px 0;
-        display: none;
+        display: inline-block;
     }
-    
-    .nav-boton:hover {
-        background-color: white;
-        color: black;
-    }
-    
-    main {
-        /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/pictures/fondo.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center; */
-        background-color: black;
-        text-align: justify;
-        font-family: "rubik", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: x-large;
-        color: white;
-    }
-    
     h1,
     h2 {
-        text-align: center;
-        font-family: 'Playfair Display SC', serif;
-        font-size: xx-large;
-        color: white;
+        font-size: x-large;
     }
-    
-    img {
-        width: 139.13px;
-        height: 215.23px;
-        margin: auto;
-    }
-    
     .contenedor-pagina-principal {
         width: 90%;
         margin: auto;
-        padding: 40px 0;
+        padding: 0px 0px;
         display: grid;
-        grid-template-rows: 1fr 2fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
     }
-    
     #titulo-principal {
-        grid-column: 1/span 2;
+        grid-column: 1/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    
     #foto-principal {
-        width: 350px;
-        height: 200px;
-        margin: auto;
-        grid-column: 2/span 1;
+        width: 230px;
+        height: 130px;
+        grid-column: 1/span 1;
         grid-row: 2/ span 1;
+        margin: auto;
     }
-    
     #texto-introduccion {
         grid-column: 1/span 1;
-        grid-row: 2/span 1;
+        grid-row: 3/span 1;
         margin: auto;
     }
-    
     .contenedor-sobre-autor {
         width: 90%;
         margin: auto;
-        padding: 40px 0;
+        padding: 0px 0;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr;
     }
-    
-    #sobre-el-autor {
-        grid-column: 1/span 1;
-        grid-row: 1/span 1;
-        margin: auto;
-    }
-    
     .contenedor-obras {
         width: 90%;
         margin: auto;
-        padding: 40px 0;
+        padding: 0px 0;
         display: grid;
-        grid-template-columns: 3fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr;
     }
-    
     .contenedor-portadas {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
         gap: 20px;
     }
-    
     #obras {
-        grid-column: 2/span 1;
+        grid-column: 1/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    
     .contenedor-reconocimientos {
         width: 90%;
         margin: auto;
-        padding: 40px 0;
+        padding: 0px 0;
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
     }
-    
-    #reconocimientos {
-        grid-column: 1/span 1;
-        grid-row: 1/span 1;
-        margin: auto;
-    }
-    
     .contenedor-galeria {
         width: 90%;
         margin: auto;
-        padding: 40px 0;
+        padding: 0px 0;
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
     }
-    
     #galeria {
-        grid-column: 2/span 1;
+        grid-column: 1/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    
-    #foto1 {
-        width: 350px;
-        height: 200px;
-        margin: auto;
-        grid-column: 1/span 1;
-        grid-row: 1/ span 1;
-    }
-    
-    footer {
-        background-color: black;
-        color: white;
-        height: 10%;
-    }
-    
-    .contenedor-footer {
-        background-color: black;
-        display: flex;
-        justify-content: space-around;
-        margin: auto;
-        flex-wrap: wrap;
-    }
-    
-    @media (max-width: 600px) {
-        .contenedor-nav {
-            width: 90%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 3fr;
-        }
-        #titulo-header {
-            grid-column: 1/span 1;
-            grid-row: 1/span 1;
-            margin: auto;
-        }
-        #logo {
-            display: none;
-        }
-        .menu {
-            grid-column: 1/span 1;
-            grid-row: 2/span 1;
-            margin: auto;
-        }
-        .menu {
-            flex-direction: column;
-        }
-        .nav-enlace {
-            margin: 10px 0;
-        }
-        .nav-boton {
-            background-color: black;
-            color: white;
-            padding: 10px 0;
-            display: inline-block;
-        }
-        main {
-            font-size: large;
-        }
-        h1,
-        h2 {
-            font-size: x-large;
-        }
-        .contenedor-pagina-principal {
-            width: 90%;
-            margin: auto;
-            padding: 40px 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 2fr 2fr;
-        }
-        #titulo-principal {
-            grid-column: 1/span 1;
-            grid-row: 1/span 1;
-            margin: auto;
-        }
-        #foto-principal {
-            width: 280px;
-            height: 130px;
-            grid-column: 1/span 1;
-            grid-row: 2/ span 1;
-            margin: auto;
-        }
-        #texto-introduccion {
-            grid-column: 1/span 1;
-            grid-row: 3/span 1;
-            margin: auto;
-        }
-        .contenedor-sobre-autor {
-            width: 90%;
-            margin: auto;
-            padding: 40px 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 8fr;
-        }
-        .contenedor-obras {
-            width: 90%;
-            margin: auto;
-            padding: 40px 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 8fr;
-        }
-        .contenedor-portadas {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr;
-            gap: 20px;
-        }
-        #obras {
-            grid-column: 1/span 1;
-            grid-row: 1/span 1;
-            margin: auto;
-        }
-        .contenedor-reconocimientos {
-            width: 90%;
-            margin: auto;
-            padding: 40px 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 2fr;
-        }
-        .contenedor-galeria {
-            width: 90%;
-            margin: auto;
-            padding: 40px 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 2fr;
-        }
-        #galeria {
-            grid-column: 1/span 1;
-            grid-row: 1/span 1;
-            margin: auto;
-        }
-    }
+}
