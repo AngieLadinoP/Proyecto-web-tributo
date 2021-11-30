@@ -21,8 +21,8 @@ header {
     width: 90%;
     display: grid;
     margin: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 #logo {
@@ -35,49 +35,57 @@ header {
 
 .responsive-menu {
     display: flex;
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
     margin: auto;
     flex-direction: column;
 }
 
-.menu-enlaces {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: auto;
+.botonMenu {
+    margin: 0 auto;
     display: block;
+    width: 40px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    background: white;
+    cursor: pointer;
+}
+
+.botonMenu span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: black;
+    margin-top: 3px;
+}
+
+#menu-toggle {
     display: none;
 }
 
-.nav-enlace {
-    background-color: black;
-    display: inline-block;
-    color: white;
-    padding: 10px 30px;
-    font-family: "rubik", sans-serif;
-    font-size: large;
-    text-decoration: none;
-}
-
-#menu-checkbox {
+#menu-desplegable {
     display: none;
+    text-align: justify;
+    background: black;
+    list-style: none;
 }
 
-.nav-enlace:hover,
-.label-menu:hover {
+#menu-desplegable li :hover,
+.botonMenu:hover {
     background-color: white;
     color: black;
 }
 
-.label-menu {
+#menu-desplegable li a {
     display: block;
-    background-color: black;
+    padding: 10px 0;
     color: white;
-    padding: 10px 30px;
-    font-family: "rubik", sans-serif;
-    font-size: larger;
-    user-select: none;
+    text-decoration: none;
+}
+
+#menu-toggle:checked+#menu-desplegable {
+    display: block;
 }
 
 main {
@@ -222,6 +230,7 @@ img {
     opacity: 0;
     transition: opacity 1s;
     border: 3px solid white;
+    list-style: none;
 }
 
 .menu-carrusel {
@@ -238,11 +247,11 @@ img {
 
 .menu-carrusel li a {
     display: inline-block;
-    color: white;
+    color: black;
     font-size: larger;
     font-weight: bold;
     text-decoration: none;
-    background-color: black;
+    background-color: white;
     padding: 10px;
     width: 20px;
     height: 20px;
@@ -282,21 +291,25 @@ footer {
         grid-row: 1/span 1;
     }
     .responsive-menu {
-        justify-content: space-between;
         grid-column: 2/span 1;
         grid-row: 1/span 1;
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
-        ;
+        flex-direction: row;
     }
-    .label-menu {
+    .botonMenu {
         display: none;
     }
-    .menu-enlaces {
-        justify-content: space-between;
+    #menu-desplegable {
+        display: flex;
+        justify-content: space-around;
         margin: auto;
-        display: inline-flex
+    }
+    #menu-desplegable li {
+        justify-content: space-around;
+        display: inline-block;
+        margin: auto;
+        text-align: left;
+        padding: 0px 10px;
+        font-size: larger;
     }
     img {
         width: 300px;

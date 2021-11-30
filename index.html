@@ -18,16 +18,21 @@
                 <img id="logo" src="/pictures/logo.png" alt="Logo">
             </div>
             <div class="responsive-menu">
-                <label for="menu-checkbox" class="label-menu"><input id="menu-checkbox" type="checkbox"> Menu </label>
-                <div class="menu">
-                    <ul class="menu-enlaces">
-                        <li><a href="#titulo-principal" class="nav-enlace">Página principal</a></li>
-                        <li><a href="#biografia" class="nav-enlace">Sobre el autor</a></li>
-                        <li><a href="#portada1" class="nav-enlace">Obras</a></li>
-                        <li><a href="#reconocimientos" class="nav-enlace">Reconocimientos</a></li>
-                        <li><a href="#galeria" class="nav-enlace">Galería</a></li>
-                    </ul>
-                </div>
+                <label for="menu-toggle">
+                    <div class="botonMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <input type="checkbox" id="menu-toggle" />
+                <ul id="menu-desplegable">
+                    <li><a href="#titulo-principal">Página principal</a></li>
+                    <li><a href="#biografia">Sobre el autor</a></li>
+                    <li><a href="#portada1">Obras</a></li>
+                    <li><a href="#reconocimientos">Reconocimientos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                </ul>
             </div>
         </nav>
 
@@ -102,11 +107,10 @@
                 <li><a href="#imagen3">3</a></li>
                 <li><a href="#imagen4">4</a></li>
             </ul>
-
-
-
         </section>
+
     </main>
+
     <footer>
         <div class="contenedor-footer">
             <p>agladinop@gmail.com</p>
@@ -114,6 +118,7 @@
             <p>Copyright 2021</p>
         </div>
     </footer>
+
 </body>
 
 </html>
