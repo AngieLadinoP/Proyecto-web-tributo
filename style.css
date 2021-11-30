@@ -7,7 +7,6 @@ footer {
     padding: 0px 30;
     overflow-x: hidden;
     box-sizing: border-box;
-    text-decoration: none;
     color: white;
 }
 
@@ -22,8 +21,8 @@ header {
     width: 90%;
     display: grid;
     margin: auto;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 #logo {
@@ -34,43 +33,51 @@ header {
     margin: auto;
 }
 
-.menu {
-    grid-column: 2/span 1;
-    grid-row: 1/span 1;
-    margin: auto;
-}
-
-.nav-enlace {
-    display: inline-block;
-    background-color: black;
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-family: "rubik", sans-serif;
-    font-size: large;
-}
-
-.nav-enlace:hover {
-    background-color: white;
-    color: black;
-}
-
-.menu {
-    background-color: black;
+.responsive-menu {
     display: flex;
-    justify-content: space-around;
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    margin: auto;
+    flex-direction: column;
 }
 
-.nav-boton {
-    background-color: black;
-    color: white;
-    padding: 10px 0;
+.menu-enlaces {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: auto;
+    display: block;
     display: none;
 }
 
-.nav-boton:hover {
+.nav-enlace {
+    background-color: black;
+    display: inline-block;
+    color: white;
+    padding: 10px 30px;
+    font-family: "rubik", sans-serif;
+    font-size: large;
+    text-decoration: none;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.nav-enlace:hover,
+.label-menu:hover {
     background-color: white;
     color: black;
+}
+
+.label-menu {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    font-family: "rubik", sans-serif;
+    font-size: larger;
+    user-select: none;
 }
 
 main {
@@ -83,7 +90,7 @@ main {
     font-family: "rubik", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: large;
+    font-size: larger;
     color: white;
 }
 
@@ -95,48 +102,51 @@ h2 {
     color: white;
 }
 
-img {
-    width: 200px;
-    height: 300px;
+.contenedor-portadas img {
+    width: 139.13px;
+    height: 215.23px;
     margin: auto;
+    border: 3px solid white;
 }
 
 .contenedor-pagina-principal {
     width: 90%;
     margin: auto;
-    padding: 40px 0px;
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
 }
 
 #titulo-principal {
-    grid-column: 1/span 2;
+    grid-column: 1/span 1;
     grid-row: 1/span 1;
     margin: auto;
 }
 
+img {
+    width: 250px;
+    height: 150px;
+}
+
 #foto-principal {
-    width: 350px;
-    height: 200px;
-    margin: auto;
-    grid-column: 2/span 1;
+    grid-column: 1/span 1;
     grid-row: 2/ span 1;
+    margin: auto;
 }
 
 #texto-introduccion {
     grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-row: 3/span 1;
     margin: auto;
-    padding: 10px;
 }
 
 .contenedor-sobre-autor {
     width: 90%;
     margin: auto;
-    padding: 40px 0;
+    padding: 0px 0;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
 }
 
 #sobre-el-autor {
@@ -145,23 +155,30 @@ img {
     margin: auto;
 }
 
+#biografia {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    margin: auto;
+}
+
 .contenedor-obras {
     width: 90%;
     margin: auto;
-    padding: 40px 0;
+    padding: 0px 0;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
 }
 
 .contenedor-portadas {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     gap: 20px;
 }
 
 #obras {
-    grid-column: 2/span 1;
+    grid-column: 1/span 1;
     grid-row: 1/span 1;
     margin: auto;
 }
@@ -169,45 +186,81 @@ img {
 .contenedor-reconocimientos {
     width: 90%;
     margin: auto;
-    padding: 40px 0;
+    padding: 10px 0px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-}
-
-#reconocimientos {
-    grid-column: 1/span 1;
-    grid-row: 1/span 1;
-    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
 }
 
 .contenedor-galeria {
     width: 90%;
     margin: auto;
-    padding: 40px 0;
+    padding: 10px 0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
 }
 
 #galeria {
-    grid-column: 2/span 1;
+    grid-column: 1/span 1;
     grid-row: 1/span 1;
     margin: auto;
 }
 
-#foto1 {
-    width: 350px;
-    height: 200px;
-    margin: auto;
+.carrusel {
     grid-column: 1/span 1;
-    grid-row: 1/ span 1;
+    grid-row: 2/span 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel li {
+    position: absolute;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 1s;
+    border: 3px solid white;
+}
+
+.menu-carrusel {
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+    text-align: center;
+    margin: auto;
+}
+
+.menu-carrusel li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu-carrusel li a {
+    display: inline-block;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%
+}
+
+.carrusel li:first-child {
+    opacity: 1;
+}
+
+.carrusel li:target {
+    opacity: 1;
 }
 
 footer {
     background-color: black;
     color: white;
-    height: auto
+    height: auto;
 }
 
 .contenedor-footer {
@@ -215,120 +268,127 @@ footer {
     display: flex;
     justify-content: space-around;
     margin: auto;
-    flex-wrap: wrap;
+    display: block;
+    text-align: center;
 }
 
-@media (max-width: 768px) {
-    /* .contenedor-nav {
-        width: 90%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr;
-    }
-    .menu {
-        grid-column: 1/span 1;
-        grid-row: 2/span 1;
-        margin: auto;
-    }
-    .menu {
-        flex-direction: column;
-    }
-    .nav-enlace {
-        margin: 10px 0;
-    }
-    .nav-boton {
-        background-color: black;
-        color: white;
-        padding: 10px 0;
-        display: inline-block; */
+@media (min-width: 768px) {
     .contenedor-nav {
-        display: none;
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: 1fr;
     }
-    h1,
-    h2 {
-        font-size: x-large;
-    }
-    .contenedor-pagina-principal {
-        width: 90%;
-        margin: auto;
-        padding: 0px 0px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 2fr;
-    }
-    #titulo-principal {
+    #logo {
         grid-column: 1/span 1;
         grid-row: 1/span 1;
+    }
+    .responsive-menu {
+        justify-content: space-between;
+        grid-column: 2/span 1;
+        grid-row: 1/span 1;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        ;
+    }
+    .label-menu {
+        display: none;
+    }
+    .menu-enlaces {
+        justify-content: space-between;
+        margin: auto;
+        display: inline-flex
+    }
+    img {
+        width: 300px;
+        height: 200px;
         margin: auto;
     }
-    #foto-principal {
-        width: 230px;
-        height: 130px;
-        grid-column: 1/span 1;
-        grid-row: 2/ span 1;
+    .contenedor-pagina-principal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    #titulo-principal {
+        grid-column: 1/span 2;
+        grid-row: 1/span 1;
         margin: auto;
     }
     #texto-introduccion {
         grid-column: 1/span 1;
-        grid-row: 3/span 1;
+        grid-row: 2/span 1;
         margin: auto;
+    }
+    #foto-principal {
+        width: 350px;
+        height: 200px;
+        grid-column: 2/span 1;
+        grid-row: 2/ span 1;
+        border: 3px solid white;
     }
     .contenedor-sobre-autor {
-        width: 90%;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+    }
+    #sobre-el-autor {
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
         margin: auto;
-        padding: 0px 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr;
+    }
+    #biografia {
+        grid-column: 2/span 1;
+        grid-row: 1/span 1;
+        margin: auto;
     }
     .contenedor-obras {
-        width: 90%;
-        margin: auto;
-        padding: 0px 0;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
     }
     .contenedor-portadas {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        gap: 20px;
-    }
-    img {
-        width: 139.13px;
-        height: 215.23px;
-        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
     }
     #obras {
-        grid-column: 1/span 1;
+        grid-column: 2/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
     .contenedor-reconocimientos {
         width: 90%;
         margin: auto;
-        padding: 0px 0;
+        padding: 40px 0;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
     }
-    .contenedor-galeria {
-        width: 90%;
-        margin: auto;
-        padding: 0px 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr;
-    }
-    #galeria {
+    #reconocimientos {
         grid-column: 1/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    .contenedor-footer {
-        display: inline-block;
+    .contenedor-galeria {
+        width: 90%;
         margin: auto;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6fr 1fr;
+    }
+    #galeria {
+        grid-column: 2/span 1;
+        grid-row: 1/span 2;
+        margin: auto;
+    }
+    .carrusel {
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+        margin: auto;
+    }
+    .menu-carrusel {
+        grid-column: 1/span 1;
+        grid-row: 2/span 1;
+    }
+    .contenedor-footer {
+        display: flex;
+        flex-direction: row;
     }
 }

@@ -13,17 +13,24 @@
 
 <body>
     <header>
-        <nav class="contenedor-nav">
-            <img id="logo" src="/pictures/logo.png" alt="Logo">
-            <div class="menu">
-                <button class="nav-boton">Menú</button>
-                <a href="#titulo-principal" class="nav-enlace">Página principal</a>
-                <a href="#biografia" class="nav-enlace">Sobre el autor</a>
-                <a href="#portada1" class="nav-enlace">Obras</a>
-                <a href="#reconocimientos" class="nav-enlace">Reconocimientos</a>
-                <a href="#galeria" class="nav-enlace">Galería</a>
+        <nav class=contenedor-nav>
+            <div id="logo">
+                <img id="logo" src="/pictures/logo.png" alt="Logo">
+            </div>
+            <div class="responsive-menu">
+                <label for="menu-checkbox" class="label-menu"><input id="menu-checkbox" type="checkbox"> Menu </label>
+                <div class="menu">
+                    <ul class="menu-enlaces">
+                        <li><a href="#titulo-principal" class="nav-enlace">Página principal</a></li>
+                        <li><a href="#biografia" class="nav-enlace">Sobre el autor</a></li>
+                        <li><a href="#portada1" class="nav-enlace">Obras</a></li>
+                        <li><a href="#reconocimientos" class="nav-enlace">Reconocimientos</a></li>
+                        <li><a href="#galeria" class="nav-enlace">Galería</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
+
     </header>
 
     <main>
@@ -74,25 +81,30 @@
         <section class="contenedor-reconocimientos">
             <h2 id="reconocimientos">Reconocimientos</h2>
             <ul id="lista-reconocimientos">
-                <li>
-                    Premio internacional en Popayán 1960
-                </li>
-                <li>
-                    Premio Selecciones Lengua Española 1961
-                </li>
-                <li>
-                    Premio Casa de las Américas en 1970
-                </li>
-                <li>
-                    Premio Ciudad de Murcia en 1971
-                </li>
+                <li>Premio internacional en Popayán 1960</li>
+                <li>Premio Selecciones Lengua Española 1961</li>
+                <li>Premio Casa de las Américas en 1970</li>
+                <li>Premio Ciudad de Murcia en 1971</li>
             </ul>
         </section>
 
-
         <section class="contenedor-galeria">
             <h2 id="galeria">Galería</h2>
-            <img clase="foto1" src="pictures/galeria/c1.jfif" alt="Foto Fernando Soto Aparicio a blanco y negro">
+            <ul class="carrusel">
+                <li id="imagen1"><img src="./pictures/galeria/c1.jfif" alt=""></li>
+                <li id="imagen2"><img src="./pictures/galeria/c2.jpg" alt=""></li>
+                <li id="imagen3"><img src="./pictures/galeria/c3.jpg" alt=""></li>
+                <li id="imagen4"><img src="./pictures/galeria/c4.jfif" alt=""></li>
+            </ul>
+            <ul class="menu-carrusel">
+                <li><a href="#imagen1">1</a></li>
+                <li><a href="#imagen2">2</a></li>
+                <li><a href="#imagen3">3</a></li>
+                <li><a href="#imagen4">4</a></li>
+            </ul>
+
+
+
         </section>
     </main>
     <footer>
