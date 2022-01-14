@@ -19,75 +19,67 @@ header {
     top: 0px;
 }
 
-.nav {
-    width: 90%;
-    display: grid;
-    margin: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-.nav__logo {
-    width: 105px;
-    height: 80px;
-    grid-column: 1/span 1;
-    grid-row: 1/span 1;
-    margin: auto;
-}
-
-.responsive-menu {
-    display: flex;
-    grid-column: 2/span 1;
-    grid-row: 1/span 1;
-    margin: auto;
-    flex-direction: column;
-}
-
-.botonMenu {
-    margin: 0 auto;
-    display: block;
-    width: 40px;
-    height: 20px;
-    padding: 10px;
-    border-radius: 7px;
-    background: white;
-    cursor: pointer;
-}
-
-.botonMenu span {
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: black;
-    margin-top: 3px;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-#menu-desplegable {
-    display: none;
-    text-align: justify;
-    background: black;
+.nav__menu--item {
     list-style: none;
 }
 
-#menu-desplegable li :hover,
-.botonMenu:hover {
-    background-color: white;
-    color: black;
+.nav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+    background-color: #000000;
 }
 
-#menu-desplegable li a {
-    display: block;
+.nav__content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav.sticky {
     padding: 10px 0;
-    color: white;
-    text-decoration: none;
+    background: #000000;
 }
 
-#menu-toggle:checked+#menu-desplegable {
-    display: block;
+.nav__logo {
+    height: 55px;
+    filter: brightness(200%);
+}
+
+.nav__menu {
+    display: inline-flex;
+}
+
+.nav__menu--link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav__menu--link:hover {
+    color: #000000;
+}
+
+.menu__icon {
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__icon--close {
+    position: absolute;
+    right: 30px;
+    top: 20px;
 }
 
 main {
@@ -102,6 +94,7 @@ main {
     font-weight: normal;
     font-size: larger;
     color: white;
+    margin-top: 100px;
 }
 
 .title {
@@ -289,37 +282,56 @@ main {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .nav {
-        grid-template-columns: 1fr 8fr;
-        grid-template-rows: 1fr;
+@media (max-width: 700px) {
+    body.disabledScroll {
+        overflow: hidden;
     }
-    .nav__logo {
-        grid-column: 1/span 1;
-        grid-row: 1/span 1;
+    .menu__icon {
+        display: block;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        z-index: 9;
     }
-    .responsive-menu {
-        grid-column: 2/span 1;
-        grid-row: 1/span 1;
-        flex-direction: row;
-    }
-    .botonMenu {
+    .menu__icon--close {
         display: none;
     }
-    #menu-desplegable {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
-        margin: auto;
+    .menu__icon--close.show {
+        display: block;
     }
-    #menu-desplegable li {
-        justify-content: space-around;
-        display: inline-block;
-        margin: auto;
-        text-align: left;
-        padding: 0px 10px;
-        font-size: larger;
+    .menu__icon.hide {
+        display: none;
     }
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: #000000;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        clip-path: circle(25px at calc(100% - 55px) calc(0% + 50px));
+        transition: all 0.3s ease;
+    }
+    .sticky .nav__menu {
+        clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
+    }
+    .nav .nav__menu--active {
+        clip-path: circle(75%);
+    }
+    .nav__menu--item {
+        margin-top: 45px;
+    }
+    .nav__menu--link {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 768px) {
     .home {
         display: grid;
         grid-template-columns: 1fr 1fr;

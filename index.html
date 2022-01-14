@@ -6,33 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página tributo</title>
+    <script rel="preload" src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="body">
     <header>
         <nav class="nav">
-            <div class="nav__logo">
+            <div class="nav__content">
                 <img class="nav__logo" src="/pictures/logo.png" alt="Logo">
-            </div>
-            <div class="responsive-menu">
-                <label for="menu-toggle">
-                    <div class="botonMenu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                <ul class="nav__menu">
+                    <div class="menu__icon menu__icon--close" onclick="hideMenu()">
+                        <i class="fas fa-times"></i>
                     </div>
-                </label>
-                <input type="checkbox" id="menu-toggle" />
-                <ul id="menu-desplegable">
-                    <li><a href="#home__title">Página principal</a></li>
-                    <li><a href="#biography">Sobre el autor</a></li>
-                    <li><a href="#works__cover--1">Obras</a></li>
-                    <li><a href="#acknowledgments">Reconocimientos</a></li>
-                    <li><a href="#galery">Galería</a></li>
+                    <li class="nav__menu--item"><a class="nav__menu--link" href="#home__title" onclick="hideMenu()">Página principal</a></li>
+                    <li class="nav__menu--item"><a class="nav__menu--link" href="#biography" onclick="hideMenu()">Sobre el autor</a></li>
+                    <li class="nav__menu--item"><a class="nav__menu--link" href="#works__cover--1" onclick="hideMenu()">Obras</a></li>
+                    <li class="nav__menu--item"><a class="nav__menu--link" href="#acknowledgments" onclick="hideMenu()">Reconocimientos</a></li>
+                    <li class="nav__menu--item"><a class="nav__menu--link" href="#galery" onclick="hideMenu()">Galería</a></li>
                 </ul>
+                <div class="menu__icon menu__icon--hamburger" onclick="showMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </nav>
 
