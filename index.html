@@ -13,9 +13,9 @@
 
 <body>
     <header>
-        <nav class=contenedor-nav>
-            <div id="logo">
-                <img id="logo" src="/pictures/logo.png" alt="Logo">
+        <nav class="nav">
+            <div class="nav__logo">
+                <img class="nav__logo" src="/pictures/logo.png" alt="Logo">
             </div>
             <div class="responsive-menu">
                 <label for="menu-toggle">
@@ -27,11 +27,11 @@
                 </label>
                 <input type="checkbox" id="menu-toggle" />
                 <ul id="menu-desplegable">
-                    <li><a href="#titulo-principal">Página principal</a></li>
-                    <li><a href="#biografia">Sobre el autor</a></li>
-                    <li><a href="#portada1">Obras</a></li>
-                    <li><a href="#reconocimientos">Reconocimientos</a></li>
-                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#home__title">Página principal</a></li>
+                    <li><a href="#biography">Sobre el autor</a></li>
+                    <li><a href="#works__cover--1">Obras</a></li>
+                    <li><a href="#acknowledgments">Reconocimientos</a></li>
+                    <li><a href="#galery">Galería</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,18 +39,18 @@
     </header>
 
     <main>
-        <section class="contenedor-pagina-principal">
-            <h1 id="titulo-principal"> FERNANDO SOTO APARICIO </h1>
-            <img id="foto-principal" src="/pictures/galeria/Principal.jpg" alt="Foto Fernando Soto Aparicio">
-            <p id="texto-introduccion">
+        <section class="home">
+            <h1 class="home__title title" id="home__title"> FERNANDO SOTO APARICIO </h1>
+            <img class="home__img" src="/pictures/galeria/Principal.jpg" alt="Foto Fernando Soto Aparicio">
+            <p class="home__text">
                 Fernando Soto Aparicio (1933 – 2016) fue un destacado escritor, poeta, guionista y profesor colombiano conocido por plasmar en sus obras las realidades históricas y sociales, así como sus críticas a la cultura colombiana y latinoamericana con el fin de
                 hacer reflexionar a sus lectores.
             </p>
         </section>
 
-        <section class="contenedor-sobre-autor">
-            <h2 id="sobre-el-autor">Sobre el autor</h2>
-            <article id="biografia">
+        <section class="author">
+            <h2 class="author__title title">Sobre el autor</h2>
+            <article class="author__biography" id="biography">
                 <p>Fernando Soto Aparicio nació el 11 de octubre de 1933 en el municipio de Socha, Boyacá, Colombia. Sin embargo, su familia se trasladó al municipio Santa Rosa de Viterbo, Boyacá, cuando era un recién nacido, donde fue criado y pasó parte
                     de su juventud.</p>
                 <p>Soto comenzó sus estudios básicos hasta cuarto grado de primaria para dedicarse plenamente a la escritura. A los 15 años publicó su primer poema titulado Himno a la Patria publicado en un periódico colombiano.</p>
@@ -68,24 +68,24 @@
             </article>
         </section>
 
-        <section class="contenedor-obras">
-            <h2 id="obras">Obras</h2>
-            <div class="contenedor-portadas">
-                <img id="portada1" src="/pictures/portadas_libros/l1.jpg" alt="Portada Bitácora de un agonizante">
-                <img id="portada2" src="/pictures/portadas_libros/l2.jpg" alt="Portada la rebelión de las ratas">
-                <img id="portada3" src="/pictures/portadas_libros/l3.jpg" alt="Portada Jazmin desnuda">
-                <img id="portada4" src="/pictures/portadas_libros/l4.jpg" alt="Portada Camino que anda">
-                <img id="portada5" src="/pictures/portadas_libros/l5.jpg" alt="Portada Portada Todos los ríos son el mismo mar">
-                <img id="portada6" src="/pictures/portadas_libros/l6.jpg" alt="Portada Y el hombre creó a Dios">
-                <img id="portada7" src="/pictures/portadas_libros/l7.jpg" alt="Portada Guacas y Guacamayas">
-                <img id="portada8" src="/pictures/portadas_libros/l8.jpg" alt="Portada Lunela">
-                <img id="portada9" src="/pictures/portadas_libros/l9.jpg" alt="Portada Palabra de fuego">
+        <section class="works">
+            <h2 class="works__title title" id="obras">Obras</h2>
+            <div class="works__covers">
+                <img class="works__cover works__cover--1" id="works__cover--1" src="/pictures/portadas_libros/l1.jpg" alt="Portada Bitácora de un agonizante">
+                <img class="works__cover works__cover--2" src="/pictures/portadas_libros/l2.jpg" alt="Portada la rebelión de las ratas">
+                <img class="works__cover works__cover--3" src="/pictures/portadas_libros/l3.jpg" alt="Portada Jazmin desnuda">
+                <img class="works__cover works__cover--4" src="/pictures/portadas_libros/l4.jpg" alt="Portada Camino que anda">
+                <img class="works__cover works__cover--5" src="/pictures/portadas_libros/l5.jpg" alt="Portada Portada Todos los ríos son el mismo mar">
+                <img class="works__cover works__cover--6" src="/pictures/portadas_libros/l6.jpg" alt="Portada Y el hombre creó a Dios">
+                <img class="works__cover works__cover--7" src="/pictures/portadas_libros/l7.jpg" alt="Portada Guacas y Guacamayas">
+                <img class="works__cover works__cover--8" src="/pictures/portadas_libros/l8.jpg" alt="Portada Lunela">
+                <img class="works__cover works__cover--9" src="/pictures/portadas_libros/l9.jpg" alt="Portada Palabra de fuego">
             </div>
         </section>
 
-        <section class="contenedor-reconocimientos">
-            <h2 id="reconocimientos">Reconocimientos</h2>
-            <ul id="lista-reconocimientos">
+        <section class="acknowledgments">
+            <h2 class="acknowledgments__title title" id="acknowledgments">Reconocimientos</h2>
+            <ul class="acknowledgments__list">
                 <li>Premio internacional en Popayán 1960</li>
                 <li>Premio Selecciones Lengua Española 1961</li>
                 <li>Premio Casa de las Américas en 1970</li>
@@ -93,40 +93,34 @@
             </ul>
         </section>
 
-        <section class="contenedor-galeria">
-            <h2 id="galeria">Galería</h2>
-            <ul class="carrusel">
-                <li id="imagen1"><img src="./pictures/galeria/c1.jfif" alt=""></li>
-                <li id="imagen2"><img src="./pictures/galeria/c2.jpg" alt=""></li>
-                <li id="imagen3"><img src="./pictures/galeria/c3.jpg" alt=""></li>
-                <li id="imagen4"><img src="./pictures/galeria/c4.jfif" alt=""></li>
-            </ul>
-            <ul class="menu-carrusel">
-                <li>
-                    <a href="#imagen1"></a>
-                </li>
-                <li>
-                    <a href="#imagen2"></a>
-                </li>
-                <li>
-                    <a href="#imagen3"></a>
-                </li>
-                <li>
-                    <a href="#imagen4"></a>
-                </li>
-            </ul>
+        <section class="galery">
+            <h2 class="galery__title title" id="galery">Galería</h2>
+            <!--             <div class="galery__imgs">
+                <div class="galery__img galery__img-1"><img src="./pictures/galeria/c1.jfif" alt=""></div>
+                <div class="galery__img galery__img-2"><img src="./pictures/galeria/c2.jpg" alt=""></div>
+                <div class="galery__img galery__img-3"><img src="./pictures/galeria/c3.jpg" alt=""></div>
+                <div class="galery__img galery__img-4"><img src="./pictures/galeria/c4.jfif" alt=""></div>
+            </div> -->
+            <div class="galery__imgs">
+                <div class="galery__img galery__img--1 galery__img--active">
+                    <!-- Place the first image as active so that it it is shown bigger than the others -->
+                </div>
+                <div class="galery__img galery__img--2">
+                </div>
+                <div class="galery__img galery__img--3">
+                </div>
+                <div class="galery__img galery__img--4">
+                </div>
+            </div>
         </section>
-
     </main>
 
-    <footer>
-        <div class="contenedor-footer">
-            <p>agladinop@gmail.com</p>
-            <p>Elaborado por Angie Ladino</p>
-            <p>Copyright 2021</p>
-        </div>
+    <footer class="footer">
+        <p>agladinop@gmail.com</p>
+        <p>Elaborado por Angie Ladino</p>
+        <p>Copyright 2021</p>
     </footer>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>

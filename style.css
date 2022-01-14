@@ -8,6 +8,8 @@ footer {
     overflow-x: hidden;
     box-sizing: border-box;
     color: white;
+    background-color: black;
+    ;
 }
 
 header {
@@ -17,7 +19,7 @@ header {
     top: 0px;
 }
 
-.contenedor-nav {
+.nav {
     width: 90%;
     display: grid;
     margin: auto;
@@ -25,7 +27,7 @@ header {
     grid-template-rows: 1fr;
 }
 
-#logo {
+.nav__logo {
     width: 105px;
     height: 80px;
     grid-column: 1/span 1;
@@ -102,22 +104,17 @@ main {
     color: white;
 }
 
-h1,
-h2 {
+.title {
     text-align: center;
     font-family: 'Playfair Display SC', serif;
     font-size: xx-large;
     color: white;
 }
 
-.contenedor-portadas img {
-    width: 139.13px;
-    height: 215.23px;
-    margin: auto;
-    border: 3px solid white;
-}
 
-.contenedor-pagina-principal {
+/* Home  */
+
+.home {
     width: 90%;
     margin: auto;
     display: grid;
@@ -125,30 +122,28 @@ h2 {
     grid-template-rows: 1fr 2fr 2fr;
 }
 
-#titulo-principal {
-    grid-column: 1/span 1;
+.home__title {
     grid-row: 1/span 1;
     margin: auto;
 }
 
-img {
+.home__img {
+    grid-row: 2/ span 1;
+    margin: auto;
     width: 250px;
     height: 150px;
 }
 
-#foto-principal {
-    grid-column: 1/span 1;
-    grid-row: 2/ span 1;
-    margin: auto;
-}
-
-#texto-introduccion {
+.home__text {
     grid-column: 1/span 1;
     grid-row: 3/span 1;
     margin: auto;
 }
 
-.contenedor-sobre-autor {
+
+/* Author */
+
+.author {
     width: 90%;
     margin: auto;
     padding: 0px 0;
@@ -157,19 +152,22 @@ img {
     grid-template-rows: 1fr 10fr;
 }
 
-#sobre-el-autor {
+.author__title {
     grid-column: 1/span 1;
     grid-row: 1/span 1;
     margin: auto;
 }
 
-#biografia {
+.author__biography {
     grid-column: 1/span 1;
     grid-row: 2/span 1;
     margin: auto;
 }
 
-.contenedor-obras {
+
+/* Works */
+
+.works {
     width: 90%;
     margin: auto;
     padding: 0px 0;
@@ -178,20 +176,30 @@ img {
     grid-template-rows: 1fr 8fr;
 }
 
-.contenedor-portadas {
+.works__covers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
 }
 
-#obras {
+.works__cover {
+    width: 130px;
+    height: 215px;
+    margin: auto;
+    border: 3px solid white;
+}
+
+.works__title {
     grid-column: 1/span 1;
     grid-row: 1/span 1;
     margin: auto;
 }
 
-.contenedor-reconocimientos {
+
+/* Acknowledgments */
+
+.acknowledgments {
     width: 90%;
     margin: auto;
     padding: 10px 0px;
@@ -200,80 +208,79 @@ img {
     grid-template-rows: 1fr 2fr;
 }
 
-.contenedor-galeria {
+
+/* Galery */
+
+.galery {
     width: 90%;
     margin: auto;
     padding: 10px 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr;
 }
 
-#galeria {
+.galery__title {
     grid-column: 1/span 1;
     grid-row: 1/span 1;
     margin: auto;
 }
 
-.carrusel {
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
-    position: relative;
+.galery__imgs {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.carrusel li {
-    position: absolute;
-    margin: auto;
-    opacity: 0;
-    transition: opacity 1s;
-    border: 3px solid white;
-    list-style: none;
+.galery__img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    border-radius: 50px;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.5s ease-in;
+    cursor: pointer;
+    margin: 4px;
 }
 
-.menu-carrusel {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
-    text-align: center;
-    margin: auto;
-    padding: 2px;
+.galery__img--1 {
+    background: url("./pictures/galeria/c1.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.menu-carrusel li {
-    display: inline-block;
-    text-align: center;
+.galery__img--2 {
+    background: url("./pictures/galeria/c2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.menu-carrusel li a {
-    display: inline-block;
-    color: black;
-    font-size: larger;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: white;
-    padding: 10px;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
+.galery__img--3 {
+    background: url("./pictures/galeria/c3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.carrusel li:first-child {
-    opacity: 1;
+.galery__img--4 {
+    background: url("./pictures/galeria/c4.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.carrusel li:target {
-    opacity: 1;
+.galery__img:nth-of-type(4) {
+    display: none;
 }
 
-footer {
-    background-color: black;
+.galery__img--active {
+    flex: 5;
+}
+
+
+/* Footer */
+
+.footer {
     color: white;
     height: auto;
-}
-
-.contenedor-footer {
     background-color: black;
     display: flex;
     justify-content: space-around;
@@ -283,11 +290,11 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .contenedor-nav {
+    .nav {
         grid-template-columns: 1fr 8fr;
         grid-template-rows: 1fr;
     }
-    #logo {
+    .nav__logo {
         grid-column: 1/span 1;
         grid-row: 1/span 1;
     }
@@ -302,6 +309,7 @@ footer {
     #menu-desplegable {
         display: flex;
         justify-content: space-around;
+        align-items: flex-end;
         margin: auto;
     }
     #menu-desplegable li {
@@ -312,61 +320,57 @@ footer {
         padding: 0px 10px;
         font-size: larger;
     }
-    img {
-        width: 300px;
-        height: 200px;
-        margin: auto;
-    }
-    .contenedor-pagina-principal {
+    .home {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 2fr;
     }
-    #titulo-principal {
+    .home__title {
         grid-column: 1/span 2;
         grid-row: 1/span 1;
         margin: auto;
     }
-    #texto-introduccion {
+    .home__text {
         grid-column: 1/span 1;
         grid-row: 2/span 1;
         margin: auto;
     }
-    #foto-principal {
+    .home__img {
         width: 350px;
         height: 200px;
         grid-column: 2/span 1;
         grid-row: 2/ span 1;
         border: 3px solid white;
+        margin: auto;
     }
-    .contenedor-sobre-autor {
+    .author {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
     }
-    #sobre-el-autor {
+    .author__title {
         grid-column: 1/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    #biografia {
+    .author__biography {
         grid-column: 2/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    .contenedor-obras {
+    .works {
         display: grid;
         grid-template-columns: 3fr 1fr;
         grid-template-rows: 1fr;
     }
-    .contenedor-portadas {
+    .works__covers {
         grid-template-columns: repeat(3, 1fr);
     }
-    #obras {
+    .works__title {
         grid-column: 2/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    .contenedor-reconocimientos {
+    .acknowledgments {
         width: 90%;
         margin: auto;
         padding: 40px 0;
@@ -374,34 +378,30 @@ footer {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
     }
-    #reconocimientos {
+    .acknowledgments__title {
         grid-column: 1/span 1;
         grid-row: 1/span 1;
         margin: auto;
     }
-    .contenedor-galeria {
+    .galery {
         width: 90%;
         margin: auto;
         padding: 40px 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 6fr 1fr;
+        grid-template-rows: 1fr;
     }
-    #galeria {
-        grid-column: 2/span 1;
-        grid-row: 1/span 2;
+    .galery__title {
+        grid-column: 2;
         margin: auto;
     }
-    .carrusel {
-        grid-column: 1/span 1;
-        grid-row: 1/span 1;
-        margin: auto;
+    .galery__img {
+        grid-column: 1;
     }
-    .menu-carrusel {
-        grid-column: 1/span 1;
-        grid-row: 2/span 1;
+    .galery__img:nth-of-type(4) {
+        display: unset;
     }
-    .contenedor-footer {
+    .footer {
         display: flex;
         flex-direction: row;
     }
