@@ -1,6 +1,8 @@
 <h1 align="center"> Fernando Soto Aparicio </h1>
 
 Website created in honor of the Colombian writer Fernando Soto Aparicio highlighting his life and work.
+</br>
+Developed with <b>HTML, CSS</b> and <b>JAVASCRIPT</b>. 
 
 <h3 align="center"> 
   
